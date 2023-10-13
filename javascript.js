@@ -47,9 +47,36 @@ function playRound(computer, user) {
     }
 }
 
-'console.log(getComputerChoice())'
-'console.log(getUserChoice())'
-console.log(playRound(getComputerChoice(), getUserChoice()))
+function game(){
+    let userScore = 0;
+    let computerScore = 0;
+    for (let i = 1; i <= 5; i++) {
+        let userChoice = getUserChoice();
+        let computerChoice = getComputerChoice();
+        console.log("You chose: " + userChoice + ", computer chose: " + computerChoice)
+        let result = playRound(computerChoice, userChoice)
+        if (result.includes('Win')) {
+            userScore++;
+        } else if (result.includes('Lose')) {
+            computerScore++;
+        }
+        console.log("User " + userScore + ":" + computerScore + " Computer")
+    }
+    if (userScore > computerScore) {
+        return "Congratulations! You win! Final Score is " + userScore + ":" + computerScore
+    } else if (userScore < computerScore) {
+        return "Bad luck :( You lose! Final Score is " + userScore + ":" + computerScore
+    } else {
+        return "It's a draw! Try again and go for the win!"
+    }
+     
+}
+
+// 'console.log(getComputerChoice())'
+// 'console.log(getUserChoice())'
+// console.log(playRound(getComputerChoice(), getUserChoice()))
+
+console.log(game())
 
 /* let count_rock = 0;
 let count_paper = 0;
