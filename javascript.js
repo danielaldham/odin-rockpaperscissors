@@ -72,25 +72,4 @@ function game(){
      
 }
 
-// 'console.log(getComputerChoice())'
-// 'console.log(getUserChoice())'
-// console.log(playRound(getComputerChoice(), getUserChoice()))
-
 console.log(game())
-
-/* let count_rock = 0;
-let count_paper = 0;
-let count_scissors = 0;
-
-for (let i = 0; i < 1000; i++) {
-    let answer = getComputerChoice()
-    if (answer === 'Rock') {
-        count_rock++;
-    } else if (answer === 'Paper') {
-        count_paper++
-    } else if (answer === 'Scissors') {
-        count_scissors++
-    }
-}
-
-console.log(count_rock, count_paper, count_scissors) */
