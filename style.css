@@ -1,6 +1,10 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     background-color: #001429;
@@ -12,7 +16,11 @@ body {
     flex-direction: column;
     border-radius: 10px;
     padding: 10px;
+    max-width: 820px; /* Set a max width for larger screens */
+    width: 100%; /* Make it responsive */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
+
 
 .buttons {
     display: flex;
@@ -91,4 +99,27 @@ a {
 
 .comp-play p {
     color: #EFF7CF;
+}
+
+@media (max-width: 480px) {
+    .heading {
+        padding: 20px;
+    }
+
+    .heading h1 {
+        font-size: 24px;
+    }
+
+    .buttons img, .comp-play img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .score {
+        font-size: 40px;
+    }
+
+    .footer a {
+        font-size: 12px;
+    }
 }
