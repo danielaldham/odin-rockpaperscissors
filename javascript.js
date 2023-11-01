@@ -80,6 +80,12 @@ let paper = document.querySelector('#paper');
 let scissors = document.querySelector('#scissors');
 let userScore = document.querySelector('#user-score');
 let compScore = document.querySelector('#comp-score');
+let compImage = document.querySelector('#comp-img')
+let result = document.querySelector('#comp-choice')
+let rockImage = './icons/rock.png';
+let paperImage = './icons/paper.png';
+let scissorsImage = './icons/scissors.png';
+let startImage = './icons/start.png';
 let userScoreValue = 0;
 let compScoreValue = 0;
 const maxScore = 5;
@@ -87,40 +93,59 @@ const maxScore = 5;
 
 function newPlayRound(userChoice) {
     let compChoice = getComputerChoice();
+    if (compChoice === 'rock') {
+        compImage.src = rockImage;
+    } else if (compChoice === 'paper') {
+        compImage.src = paperImage;
+    } else if (compChoice === 'scissors') {
+        compImage.src = scissorsImage;
+    }
     console.log("You chose: " + userChoice + ", computer chose: " + compChoice)
 
     if (userChoice === 'rock') {
         if (compChoice === 'paper') {
             compScoreValue ++;
             compScore.innerHTML = compScoreValue
+            result.innerHTML = 'You Lose'
             console.log('You Lose');
         }
         else if (compChoice === 'scissors') {
             userScoreValue++;
             userScore.innerHTML = userScoreValue
+            result.innerHTML = 'You Win'
             console.log('You Win');
+        } else {
+            result.innerHTML = "It's a Draw"
         }
     } else if (userChoice === 'paper') {
         if (compChoice === 'scissors') {
             compScoreValue ++;
             compScore.innerHTML = compScoreValue
+            result.innerHTML = 'You Lose'
             console.log('You Lose');
         }
         else if (compChoice === 'rock') {
             userScoreValue++;
             userScore.innerHTML = userScoreValue
+            result.innerHTML = 'You Win'
             console.log('You Win');
+        } else {
+            result.innerHTML = "It's a Draw"
         }
     } else if (userChoice === 'scissors') {
         if (compChoice === 'rock') {
             compScoreValue ++;
             compScore.innerHTML = compScoreValue
+            result.innerHTML = 'You Lose'
             console.log('You Lose');
         }
         else if (compChoice === 'paper') {
             userScoreValue++;
             userScore.innerHTML = userScoreValue
+            result.innerHTML = 'You Win'
             console.log('You Win');
+        } else {
+            result.innerHTML = "It's a Draw"
         }
     }
     if (userScoreValue === 5) {
@@ -129,12 +154,16 @@ function newPlayRound(userChoice) {
         userScore.innerHTML = userScoreValue;
         compScoreValue = 0;
         compScore.innerHTML = compScoreValue;
+        compImage.src = startImage;
+        result.innerHTML = ''
     } else if (compScoreValue === 5) {
         alert('You Lose')
         userScoreValue = 0;
         userScore.innerHTML = userScoreValue;
         compScoreValue = 0;
         compScore.innerHTML = compScoreValue;
+        compImage.src = startImage;
+        result.innerHTML = ''
     }
 }
 

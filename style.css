@@ -11,19 +11,20 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .buttons {
     display: flex;
     justify-content: space-evenly;
-    padding: 40px;
+    padding: 20px;
 }
 
 .score-div {
     display: flex;
     justify-content: space-evenly;
-    padding: 40px;
+    align-items: center;
+    padding: 20px;
 }
 
 .heading {
@@ -54,6 +55,11 @@ img {
     width: 200px;
 }
 
+.comp-play img {
+    height: 150px;
+    width: 150px;
+}
+
 button {
     background-color: transparent;
 }
@@ -62,7 +68,7 @@ button {
     transform: scale(1.1) rotate(35deg);
 }
 
-.buttons img {
+img {
 	transform: rotate(30deg);
     filter: drop-shadow(2px 2px 4px #48BEFF);
 }
@@ -74,5 +80,15 @@ button {
 }
 
 a {
-    color: white;
+    color: #EFF7CF;
+}
+
+.comp-play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comp-play p {
+    color: #EFF7CF;
 }
