@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.score {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.heading {
+    background-color: slategray;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+h1 {
+    margin: 0px;
+}

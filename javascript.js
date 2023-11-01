@@ -73,3 +73,17 @@ function game(){
 }
 
 // console.log(game())
+
+let rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+    console.log(playRound(getComputerChoice(), 'rock'));
+})
+
+let paper = document.querySelector('#paper');
+paper.addEventListener('click', () => {
+    console.log(playRound(getComputerChoice(), 'paper'));
+})
+let scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', () => {
+    console.log(playRound(getComputerChoice(), 'scissors'));
+})
