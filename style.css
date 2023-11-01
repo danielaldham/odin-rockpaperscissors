@@ -101,6 +101,26 @@ a {
     color: #EFF7CF;
 }
 
+@media (max-width: 768px) {
+    .buttons, .score-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons img, .comp-play img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .heading h1 {
+        font-size: 40px;
+    }
+
+    .score {
+        font-size: 60px;
+    }
+}
+
 @media (max-width: 480px) {
     .heading {
         padding: 20px;
